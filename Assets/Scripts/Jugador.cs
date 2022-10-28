@@ -28,4 +28,5 @@ public class Jugador : MonoBehaviour
         float moveX = Input.GetAxisRaw("Horizontal");
         jugadorRB.velocity = new Vector2(moveX * velocidadMov, jugadorRB.velocity.y);
     }
+    
 }
