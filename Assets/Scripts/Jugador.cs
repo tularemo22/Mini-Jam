@@ -21,6 +21,7 @@ public class Jugador : MonoBehaviour
     private void FixedUpdate()
     {
         Mover();
+        Saltar();
     }
 
     private void Mover()
@@ -28,5 +29,12 @@ public class Jugador : MonoBehaviour
         float moveX = Input.GetAxisRaw("Horizontal");
         jugadorRB.velocity = new Vector2(moveX * velocidadMov, jugadorRB.velocity.y);
     }
-    
+
+    private void Saltar()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            jugadorRB.AddForce(new Vector2(0, 10));
+        }
+    }
 }
