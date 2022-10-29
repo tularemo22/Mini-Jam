@@ -6,6 +6,11 @@ public class Jugador : MonoBehaviour
 {
     Rigidbody2D jugadorRB;
     [SerializeField] float velocidadMov;
+    [SerializeField] float fuerzaSalto;
+    [SerializeField] private Transform pies;
+    [SerializeField] private LayerMask ground;
+    [SerializeField] private float radioPies;
+    bool enSuelo;
 
     void Start()
     {
@@ -15,26 +20,38 @@ public class Jugador : MonoBehaviour
 
     void Update()
     {
-
-    }
-
-    private void FixedUpdate()
-    {
-        Mover();
         Saltar();
+        Mover();
     }
 
     private void Mover()
     {
         float moveX = Input.GetAxisRaw("Horizontal");
         jugadorRB.velocity = new Vector2(moveX * velocidadMov, jugadorRB.velocity.y);
+
+        //Para que se gire
+
+        if (moveX < 0.0f)
+        {
+            transform.localScale = new Vector3(-1f, 1f, 1f);
+        }
+        else if(moveX > 0.0f)
+        {
+            transform.localScale = new Vector3(1f, 1f, 1f);
+        }
     }
 
     private void Saltar()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        //Ground check. Creo una esfera en los pies del jugador para verificar mediante un buleano si está en suelo
+        enSuelo = Physics2D.OverlapCircle(pies.position, radioPies, ground);
+
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            jugadorRB.AddForce(new Vector2(0, 10));
+            if (enSuelo)
+            {
+                 jugadorRB.AddForce(Vector2.up * fuerzaSalto, ForceMode2D.Impulse);
+            }
         }
     }
 }
