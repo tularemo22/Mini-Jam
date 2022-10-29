@@ -5,12 +5,14 @@ using UnityEngine;
 public class Jugador : MonoBehaviour
 {
     Rigidbody2D jugadorRB;
+    bool enSuelo;
+
     [SerializeField] float velocidadMov;
     [SerializeField] float fuerzaSalto;
-    [SerializeField] private Transform pies;
-    [SerializeField] private LayerMask ground;
-    [SerializeField] private float radioPies;
-    bool enSuelo;
+
+    [SerializeField] private Transform pies;     // Chequeo de suelo
+    [SerializeField] private LayerMask ground;  //
+    [SerializeField] private float radioPies;  //
 
     void Start()
     {
@@ -43,7 +45,7 @@ public class Jugador : MonoBehaviour
 
     private void Saltar()
     {
-        //Ground check. Creo una esfera en los pies del jugador para verificar mediante un buleano si está en suelo
+        //Ground check. Crea una esfera en los pies del jugador para verificar mediante un buleano si está en suelo
         enSuelo = Physics2D.OverlapCircle(pies.position, radioPies, ground);
 
         if (Input.GetKeyDown(KeyCode.Space))
