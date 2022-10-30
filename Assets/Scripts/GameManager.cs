@@ -101,7 +101,7 @@ public class GameManager : MonoBehaviour
         //Setear animacion de morderlo
         //Setear anim de muerte
         //Reiniciar la esccena
-        VecesApretadasElBoton = 0;
+       
         Debug.Log("MORDIENDO �AM �AM");
     }
 
