@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
         //Desactivar pantalla de moridda
     }
 
-    //Funcion para cambio de escenas
+    //Funciones para cambio de escenas
 
     public void IniciarJuego()
     {
