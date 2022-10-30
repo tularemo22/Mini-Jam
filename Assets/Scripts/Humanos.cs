@@ -10,6 +10,11 @@ public class Humanos : MonoBehaviour
         {
             GameManager.Instance.StartCoroutine("PantallaDeMordida");
             Debug.Log("Me muerde");
+
+            GetComponent<Rigidbody2D>();
+
         }
     }
+
+
 }
