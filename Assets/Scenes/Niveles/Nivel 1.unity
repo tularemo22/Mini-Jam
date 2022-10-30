@@ -1934,7 +1934,11 @@ PrefabInstance:
     - target: {fileID: 8093043533615280405, guid: 3807b3cc79807be42b656508b99c74a9, type: 3}
       propertyPath: virtualCamara
       value: 
+<<<<<<< Updated upstream
       objectReference: {fileID: 0}
+=======
+      objectReference: {fileID: 351033007}
+>>>>>>> Stashed changes
     - target: {fileID: 8093043533615280405, guid: 3807b3cc79807be42b656508b99c74a9, type: 3}
       propertyPath: tiempoParaEscapar
       value: 5
