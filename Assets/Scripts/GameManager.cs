@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
     public float tiempoParaEscapar;
     public bool estaMordiendo; //Seteada para que no pueda moverse mientras muerde
     bool pudoEscapar;
+    //llave
+    public int llave = 0;
 
     public IEnumerator PantallaDeMordida()
     {
@@ -101,7 +103,7 @@ public class GameManager : MonoBehaviour
         //Setear anim de muerte
         //Reiniciar la esccena
         VecesApretadasElBoton = 0;
-        Debug.Log("MORDIENDO ÑAM ÑAM");
+        Debug.Log("MORDIENDO ï¿½AM ï¿½AM");
     }
 
     //Llamarlo cada vez que se aprete clic
