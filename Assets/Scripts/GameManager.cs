@@ -62,6 +62,7 @@ public class GameManager : MonoBehaviour
         apretarBoton.SetActive(false);
 
         estaMordiendo = false;
+        camaraVirtual.m_Lens.OrthographicSize = 10;
     }
 
     IEnumerator EvitaMorder()

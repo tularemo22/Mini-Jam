@@ -941,7 +941,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 445971421608675111, guid: 92392fc346cf6174b88473bb61eb2929, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.444165
+      value: -9.444163
       objectReference: {fileID: 0}
     - target: {fileID: 445971421608675111, guid: 92392fc346cf6174b88473bb61eb2929, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1853,9 +1853,9 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 6.1913967, y: 29.885315}
+    - - {x: 5.82323, y: 30.008038}
       - {x: 9.0011015, y: 30.684277}
-      - {x: -41.81563, y: 29.90222}
+      - {x: -42.183796, y: 29.534054}
       - {x: -42.535133, y: -10.954932}
       - {x: -9.067194, y: -11.118574}
       - {x: 5.667983, y: -10.790015}
@@ -2225,7 +2225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7976941585864574863, guid: 107f0d6a62cc3284595db8867a9989c7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.444165
+      value: -9.444163
       objectReference: {fileID: 0}
     - target: {fileID: 7976941585864574863, guid: 107f0d6a62cc3284595db8867a9989c7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3686,6 +3686,10 @@ PrefabInstance:
       propertyPath: virtualCamara
       value: 
       objectReference: {fileID: 351033007}
+    - target: {fileID: 8093043533615280405, guid: 3807b3cc79807be42b656508b99c74a9, type: 3}
+      propertyPath: tiempoParaEscapar
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8093043533615280406, guid: 3807b3cc79807be42b656508b99c74a9, type: 3}
       propertyPath: m_Name
       value: GameManager
