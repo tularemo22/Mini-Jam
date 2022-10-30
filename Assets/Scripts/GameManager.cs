@@ -22,21 +22,20 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] GameObject mordiendo;
     [SerializeField] GameObject vampiro;
+    [SerializeField] Camera mainCamara;
 
     public IEnumerator PantallaDeMordida()
-    {   //Activar vampiro de fondo
-        Debug.Log("Iniciando coorrutina");
-        vampiro.gameObject.SetActive(true);
+    {   //Zoom 
+
+
         yield return new WaitForSeconds(2);
 
-        // Activar pantalla de mordida
-        mordiendo.SetActive(true);
+       
         yield return new WaitForSeconds(5);
 
         // Apretar la cantidad de clicks suficientes
 
         //Desactivar pantalla de moridda
-        mordiendo.SetActive(false);
     }
 
     //Funcion para cambio de escenas
