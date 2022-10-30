@@ -22,10 +22,9 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] GameObject mordiendo;
     [SerializeField] GameObject vampiro;
-    [SerializeField] Camera mainCamara;
 
     public IEnumerator PantallaDeMordida()
-    {   //Zoom 
+    {   
 
 
         yield return new WaitForSeconds(2);
@@ -40,7 +39,19 @@ public class GameManager : MonoBehaviour
 
     //Funcion para cambio de escenas
 
-    public void CambiarEscena()
+    public void IniciarJuego()
+    {
+        SceneManager.LoadScene(2);
+    }
+    public void IrMenuPrincipal()
+    {
+        SceneManager.LoadScene(0);
+    }
+    public void IrCreditos()
+    {
+        SceneManager.LoadScene(1);
+    }
+    public void SigueinteEscena()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
