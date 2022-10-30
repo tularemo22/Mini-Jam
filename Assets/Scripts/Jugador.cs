@@ -6,6 +6,7 @@ public class Jugador : MonoBehaviour
 {
     Rigidbody2D jugadorRB;
     bool enSuelo;
+    Animator jugadorAnim;
 
     [SerializeField] float velocidadMov;
     [SerializeField] float fuerzaSalto;
@@ -17,6 +18,7 @@ public class Jugador : MonoBehaviour
     void Start()
     {
         jugadorRB = GetComponent<Rigidbody2D>();
+        jugadorAnim = GetComponent<Animator>();
     }
 
 
@@ -40,6 +42,15 @@ public class Jugador : MonoBehaviour
         else if(moveX > 0.0f)
         {
             transform.localScale = new Vector3(1f, 1f, 1f);
+        }
+
+        if (moveX != 0.0f)
+        {
+            jugadorAnim.SetBool("Correr", true);
+        }
+        else
+        {
+            jugadorAnim.SetBool("Correr", false);
         }
     }
 
