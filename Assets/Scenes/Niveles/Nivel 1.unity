@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &25970349 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2394450225507043842, guid: 5747a302b8f4f6143b40af052f920e73, type: 3}
+  m_PrefabInstance: {fileID: 2041401288}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &94936514
 GameObject:
   m_ObjectHideFlags: 0
@@ -2890,6 +2901,18 @@ PrefabInstance:
     - target: {fileID: 8093043533615280406, guid: 3807b3cc79807be42b656508b99c74a9, type: 3}
       propertyPath: m_Name
       value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986603766040406703, guid: 3807b3cc79807be42b656508b99c74a9, type: 3}
+      propertyPath: apretarBoton
+      value: 
+      objectReference: {fileID: 679223354}
+    - target: {fileID: 8986603766040406703, guid: 3807b3cc79807be42b656508b99c74a9, type: 3}
+      propertyPath: camaraVirtual
+      value: 
+      objectReference: {fileID: 25970349}
+    - target: {fileID: 8986603766040406703, guid: 3807b3cc79807be42b656508b99c74a9, type: 3}
+      propertyPath: tiempoParaEscapar
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3807b3cc79807be42b656508b99c74a9, type: 3}

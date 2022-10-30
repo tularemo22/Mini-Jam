@@ -21,8 +21,7 @@ public class GameManager : MonoBehaviour
         
     }
 
-    [SerializeField] GameObject mordiendo;
-    [SerializeField] GameObject vampiro;
+   
     [SerializeField] CinemachineVirtualCamera camaraVirtual;
 
     [SerializeField] GameObject apretarBoton;
