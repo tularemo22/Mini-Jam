@@ -31,20 +31,28 @@ public class Jugador : MonoBehaviour
     private void Mover()
     {
         float moveX = Input.GetAxisRaw("Horizontal");
-        jugadorRB.velocity = new Vector2(moveX * velocidadMov, jugadorRB.velocity.y);
-
+        if (GameManager.Instance.estaMordiendo == false)
+        {
+            jugadorRB.velocity = new Vector2(moveX * velocidadMov, jugadorRB.velocity.y);
+        }
+        else
+        {
+            jugadorRB.velocity = Vector2.zero;
+        }
+        
         //Para que se gire
 
-        if (moveX < 0.0f)
+        if (moveX < 0.0f && GameManager.Instance.estaMordiendo == false)
         {
             transform.localScale = new Vector3(-1f, 1f, 1f);
         }
-        else if(moveX > 0.0f)
+        else if(moveX > 0.0f && GameManager.Instance.estaMordiendo == false)
         {
             transform.localScale = new Vector3(1f, 1f, 1f);
         }
 
-        if (moveX != 0.0f)
+        //Setear anim de correr 
+        if (moveX != 0.0f && GameManager.Instance.estaMordiendo == false)
         {
             jugadorAnim.SetBool("Correr", true);
         }

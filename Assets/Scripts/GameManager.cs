@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Cinemachine;
 
 public class GameManager : MonoBehaviour
 {
@@ -22,19 +23,90 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] GameObject mordiendo;
     [SerializeField] GameObject vampiro;
+    [SerializeField] CinemachineVirtualCamera camaraVirtual;
+
+    [SerializeField] GameObject apretarBoton;
+    public int VecesApretadasElBoton = 0;
+    public float tiempoParaEscapar;
+    public bool estaMordiendo; //Seteada para que no pueda moverse mientras muerde
+    bool pudoEscapar;
 
     public IEnumerator PantallaDeMordida()
-    {   
+    {
+        estaMordiendo = true;
+        // zoom
+        for (float i = 10; i > 5; i -= 1)
+        {
+            camaraVirtual.m_Lens.OrthographicSize = i;
+            yield return new WaitForSeconds(0.5f);
+        }
 
+        //Mordida
+            //Setear animacion
+            //Llamar funcion
+               StartCoroutine(EvitaMorder());
+        //Tiempo para escapar antes de mirar la condicion
+        yield return new WaitForSeconds(tiempoParaEscapar);
+        //Condicional si escapo o no
+        if (pudoEscapar)
+        {
+            Soltarse();
+            VecesApretadasElBoton = 0;
+        }
+        else
+        {
+            Morderlo();
+            VecesApretadasElBoton = 0;
+        }
+
+        apretarBoton.SetActive(false);
+
+        estaMordiendo = false;
+    }
+
+    IEnumerator EvitaMorder()
+    {
+        //Apretar un boton repetidas veces para soltarte.
+        apretarBoton.SetActive(true);
+
+        //Crear un numero aleatorio que indique cuantas veces tenemos que apretar
+        int clicsNecesarios = Random.Range(5, 10);
 
         yield return new WaitForSeconds(2);
 
-       
-        yield return new WaitForSeconds(5);
+        if (VecesApretadasElBoton > clicsNecesarios)
+        { 
+            pudoEscapar = true;
+        }
+        else
+        {       
+            pudoEscapar = false;
+        }
 
-        // Apretar la cantidad de clicks suficientes
+        //Setear ese numero a el slider de la sed de sangre
+    }
 
-        //Desactivar pantalla de moridda
+    private void Soltarse()
+    {
+        // Volver camara
+        camaraVirtual.m_Lens.OrthographicSize = 10;
+        //Reiniciar las veces apretadas a 0
+
+        Debug.Log("Tras un duro esfuerzo conseguimos soltarnos");
+    }
+    private void Morderlo()
+    {
+        //Setear animacion de morderlo
+        //Setear anim de muerte
+        //Reiniciar la esccena
+        VecesApretadasElBoton = 0;
+        Debug.Log("MORDIENDO ÑAM ÑAM");
+    }
+
+    //Llamarlo cada vez que se aprete clic
+    public void ApretaElBoton()
+    {
+        VecesApretadasElBoton++;
     }
 
     //Funciones para cambio de escenas
