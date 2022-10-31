@@ -4,16 +4,33 @@ using UnityEngine;
 
 public class Puerta : MonoBehaviour
 {
- private void OnTriggerEnter2D(Collider2D other) 
-   { 
-    if (other.CompareTag("Jugador"))
+
+    Animator puertaAnimator;
+
+    private void Start()
     {
-            if (GameManager.Instance.llave == 1)
-    {   
-        GameManager.Instance.SigueinteEscena();
+        puertaAnimator = GetComponent<Animator>();
     }
+
+    private void OnTriggerEnter2D(Collider2D other) 
+        { 
+         if (other.CompareTag("Jugador"))
+         {
+             if (GameManager.Instance.llave == 1)
+             {
+                StartCoroutine(PasarNivel());
+             }
     
-   }
+        }   
 
    }
+
+    IEnumerator PasarNivel()
+    {
+        puertaAnimator.SetTrigger("PasandoNivel");
+        GameManager.Instance.sePuedeMover = false;
+        yield return new WaitForSeconds(2);
+        GameManager.Instance.sePuedeMover = true;
+        GameManager.Instance.SigueinteEscena();
+    }
 }

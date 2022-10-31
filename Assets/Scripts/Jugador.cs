@@ -31,7 +31,7 @@ public class Jugador : MonoBehaviour
     private void Mover()
     {
         float moveX = Input.GetAxisRaw("Horizontal");
-        if (GameManager.Instance.estaMordiendo == false)
+        if (GameManager.Instance.estaMordiendo == false && GameManager.Instance.sePuedeMover == true)
         {
             jugadorRB.velocity = new Vector2(moveX * velocidadMov, jugadorRB.velocity.y);
         }
@@ -42,17 +42,17 @@ public class Jugador : MonoBehaviour
         
         //Para que se gire
 
-        if (moveX < 0.0f && GameManager.Instance.estaMordiendo == false)
+        if (moveX < 0.0f && GameManager.Instance.estaMordiendo == false && GameManager.Instance.sePuedeMover == true)
         {
             transform.localScale = new Vector3(-1f, 1f, 1f);
         }
-        else if(moveX > 0.0f && GameManager.Instance.estaMordiendo == false)
+        else if(moveX > 0.0f && GameManager.Instance.estaMordiendo == false && GameManager.Instance.sePuedeMover == true)
         {
             transform.localScale = new Vector3(1f, 1f, 1f);
         }
 
         //Setear anim de correr 
-        if (moveX != 0.0f && GameManager.Instance.estaMordiendo == false)
+        if (moveX != 0.0f && GameManager.Instance.estaMordiendo == false && GameManager.Instance.sePuedeMover == true)
         {
             jugadorAnim.SetBool("Correr", true);
         }
@@ -67,7 +67,7 @@ public class Jugador : MonoBehaviour
         //Ground check. Crea una esfera en los pies del jugador para verificar mediante un buleano si está en suelo
         enSuelo = Physics2D.OverlapCircle(pies.position, radioPies, ground);
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && GameManager.Instance.sePuedeMover == true)
         {
             if (enSuelo)
             {
