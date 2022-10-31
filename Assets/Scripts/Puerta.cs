@@ -29,7 +29,7 @@ public class Puerta : MonoBehaviour
     {
         puertaAnimator.SetTrigger("PasandoNivel");
         GameManager.Instance.sePuedeMover = false;
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(2); 
         GameManager.Instance.sePuedeMover = true;
         GameManager.Instance.SigueinteEscena();
     }
