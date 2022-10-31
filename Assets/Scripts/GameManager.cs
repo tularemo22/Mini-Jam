@@ -25,13 +25,19 @@ public class GameManager : MonoBehaviour
     [SerializeField] CinemachineVirtualCamera camaraVirtual;
 
     [SerializeField] GameObject apretarBoton;
+
     public int VecesApretadasElBoton = 0;
     public float tiempoParaEscapar;
     public bool estaMordiendo; //Seteada para que no pueda moverse mientras muerde
+    public bool sePuedeMover;
     bool pudoEscapar;
     //llave
     public int llave = 0;
 
+    private void Start()
+    {
+        sePuedeMover = true;
+    }
     public IEnumerator PantallaDeMordida()
     {
         estaMordiendo = true;
