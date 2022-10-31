@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Cinemachine;
+using UnityEngine.Audio;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,14 +21,22 @@ public class GameManager : MonoBehaviour
         }
         
     }
+    //Sonidos
+    [Header("Sonidos")]
+    AudioSource audioSource;
+    public AudioClip mordida;
+    public AudioClip aldeanoMuriendo;
+    public AudioClip aparicionMordiendo;
 
-   
+    [Header("Setear Esto")]
     [SerializeField] CinemachineVirtualCamera camaraVirtual;
 
     [SerializeField] GameObject apretarBoton;
 
     [SerializeField] Animator playerAnimator;
+    [SerializeField] GameObject humano;
 
+    [Header("Variables")]
     public int VecesApretadasElBoton = 0;
     public float tiempoParaEscapar;
     public bool estaMordiendo; //Seteada para que no pueda moverse mientras muerde
@@ -47,6 +56,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         sePuedeMover = true;
+        audioSource = GetComponent<AudioSource>();
     }
     public IEnumerator PantallaDeMordida()
     {
@@ -60,13 +70,14 @@ public class GameManager : MonoBehaviour
             camaraVirtual.m_Lens.OrthographicSize = i;
             yield return new WaitForSeconds(0.5f);
         }
-
+        audioSource.PlayOneShot(aparicionMordiendo, 0.05f);
         //Aca se setea mordida caminos
 
 
 
         //Llamar funcion
         StartCoroutine(EvitaMorder());
+        Destroy(humano.gameObject);
         personaDesaparece = true; //////
 
         //Desactivar vampiro y persona
@@ -150,6 +161,12 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(2.5f);
         RecargarEscena();
         muertoAnimacion = false;
+    }
+
+    public void SonidoMordida()
+    {
+        audioSource.PlayOneShot(mordida, 0.2f);
+        audioSource.PlayOneShot(aldeanoMuriendo, 0.2f);
     }
 
     void morirPersonaje()

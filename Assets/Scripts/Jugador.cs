@@ -104,4 +104,11 @@ public class Jugador : MonoBehaviour
             }
         }
     }
+
+    //Sonidos
+
+    public void SonidoMordida()
+    {
+        GameManager.Instance.SonidoMordida();
+    }
 }
