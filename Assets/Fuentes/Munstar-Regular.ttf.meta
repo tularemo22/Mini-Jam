@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 1c6329cf4a6def94ea8de30c00695905
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Munstar
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 291529f011e1b954f849b6c13c57ad6e, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

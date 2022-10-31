@@ -74,5 +74,7 @@ public class Jugador : MonoBehaviour
                  jugadorRB.AddForce(Vector2.up * fuerzaSalto, ForceMode2D.Impulse);
             }
         }
+
+        
     }
 }
