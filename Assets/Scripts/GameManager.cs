@@ -92,7 +92,7 @@ public class GameManager : MonoBehaviour
         estaMordiendo = false;
         caminosLomuerde = false;
         caminosLoSuelta = false;
-        camaraVirtual.m_Lens.OrthographicSize = 10;
+        //camaraVirtual.m_Lens.OrthographicSize = 10;
     }
 
     IEnumerator EvitaMorder()
@@ -114,7 +114,6 @@ public class GameManager : MonoBehaviour
         else
         {       
             pudoEscapar = false;
-           // caminosLomuerde = true;
         }
     }
 
@@ -124,7 +123,7 @@ public class GameManager : MonoBehaviour
     {
         playerAnimator.SetBool("CaminoLosuelta", true);
 
-        yield return new WaitForSeconds(4.5f);
+        yield return new WaitForSeconds(4.8f);
         // Volver camara
         camaraVirtual.m_Lens.OrthographicSize = 10;
         personaDesaparece = true;
@@ -139,15 +138,16 @@ public class GameManager : MonoBehaviour
      IEnumerator Morderlo()
     {
         //Setear animacion de morderlo
-        caminosLomuerde = true;
+        playerAnimator.SetBool("CaminoLomuerde", true);
         yield return new WaitForSeconds(1.44f); //Tiempo que dura la animacion
+
         //Setear anim de muerte
         //Reiniciar la esccena
         personaDesaparece = true;
         morirPersonaje();
 
         Debug.Log("MORDIENDO �AM �AM");
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(2.5f);
         RecargarEscena();
         muertoAnimacion = false;
     }

@@ -154,8 +154,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.041105628}
-  m_Size: {x: 1, y: 3.0744212}
+  m_Offset: {x: 0, y: 1.5960141}
+  m_Size: {x: 1, y: 3.1271303}
   m_Direction: 0
 --- !u!114 &4349670658622206382
 MonoBehaviour:
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidadMov: 10
-  fuerzaSalto: 28
+  fuerzaSalto: 18.5
   pies: {fileID: 7403347343256229396}
   ground:
     serializedVersion: 2
