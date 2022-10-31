@@ -26,6 +26,20 @@ public class Jugador : MonoBehaviour
     {
         Saltar();
         Mover();
+
+        if (GameManager.Instance.mordiendoAnimacion == true)
+        {
+            jugadorAnim.SetBool("Mordiendo", true);
+        }
+        else
+        {
+            jugadorAnim.SetBool("Mordiendo", false);
+        }
+        if (GameManager.Instance.muertoAnimacion == true)
+        {
+            jugadorAnim.SetBool("Muerto", true);
+        }
+
     }
 
     private void Mover()
