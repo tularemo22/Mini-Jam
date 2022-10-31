@@ -110,8 +110,11 @@ public class GameManager : MonoBehaviour
         //Setear animacion de morderlo
         //Setear anim de muerte
         //Reiniciar la esccena
-       
+        personaDesaparece = true;
+
         Debug.Log("MORDIENDO �AM �AM");
+
+        RecargarEscena();
     }
 
     //Llamarlo cada vez que se aprete clic
@@ -137,11 +140,13 @@ public class GameManager : MonoBehaviour
     public void SigueinteEscena()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        llave = 0;
     }
 
     public void RecargarEscena()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        llave = 0;
     }
     
     public void SalirDelJuego()

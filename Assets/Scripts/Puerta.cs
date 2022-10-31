@@ -11,6 +11,14 @@ public class Puerta : MonoBehaviour
     {
         puertaAnimator = GetComponent<Animator>();
     }
+    private void Update()
+    {
+        if (GameManager.Instance.llave == 1)
+        {
+            puertaAnimator.SetTrigger("PasandoNivel");
+
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D other) 
         { 
@@ -22,14 +30,14 @@ public class Puerta : MonoBehaviour
              }
     
         }   
-
+       
    }
-
+    
     IEnumerator PasarNivel()
     {
-        puertaAnimator.SetTrigger("PasandoNivel");
+        
         GameManager.Instance.sePuedeMover = false;
-        yield return new WaitForSeconds(2); 
+        yield return new WaitForSeconds(1); 
         GameManager.Instance.sePuedeMover = true;
         GameManager.Instance.SigueinteEscena();
     }
