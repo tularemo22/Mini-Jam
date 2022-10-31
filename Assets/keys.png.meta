@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e5625da08abe9034b8c15734e6f4e50e
+guid: 3aca1511939b96f409df8d892178847b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Pinchos_0
+      name: keys_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 40
-        width: 27
-        height: 14
+        x: 5
+        y: 20
+        width: 13
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba80e5f590cd4ff4da11a1571d8a8c78
-      internalID: 1049852214
+      spriteID: a62a9555de083a348ab6a9fba4f770d7
+      internalID: -275074395
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pinchos_1
+      name: keys_1
       rect:
         serializedVersion: 2
-        x: 19
-        y: 10
-        width: 27
-        height: 14
+        x: 25
+        y: 20
+        width: 13
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +140,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0804df90db996f14099da4370c092050
-      internalID: 1686340917
+      spriteID: b98a8f56a6fb3ba4581862072e9a0b14
+      internalID: 718551750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keys_2
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 20
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ec9239afe71f004eae5535c849859fd
+      internalID: 1113507370
       vertices: []
       indices: 
       edges: []
@@ -157,8 +178,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Pinchos_1: 1686340917
-      Pinchos_0: 1049852214
+      keys_2: 1113507370
+      keys_1: 718551750
+      keys_0: -275074395
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
