@@ -3196,6 +3196,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f1022a75db323e48ac0420fa4a01669, type: 3}
+--- !u!1 &1893969481 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3615324224928562173, guid: 096dbc5e9a2b23e4f915ac1bbe8b052b, type: 3}
+  m_PrefabInstance: {fileID: 3615324224992117647}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1941974422
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3434,11 +3439,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2394450226392403666, guid: 5747a302b8f4f6143b40af052f920e73, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.9438925
+      value: -14.919505
       objectReference: {fileID: 0}
     - target: {fileID: 2394450226392403666, guid: 5747a302b8f4f6143b40af052f920e73, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.44617915
+      value: -0.4462092
       objectReference: {fileID: 0}
     - target: {fileID: 8541731872431890915, guid: 5747a302b8f4f6143b40af052f920e73, type: 3}
       propertyPath: m_Volume
@@ -3526,6 +3531,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParedesFondo
       objectReference: {fileID: 0}
+    - target: {fileID: 2071701801572847413, guid: 22436293eaaf45b4cab2304be5795128, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 51.51
+      objectReference: {fileID: 0}
     - target: {fileID: 4840826715008273808, guid: 22436293eaaf45b4cab2304be5795128, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -3569,6 +3578,18 @@ PrefabInstance:
     - target: {fileID: 4840826715008273808, guid: 22436293eaaf45b4cab2304be5795128, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7964112590044607432, guid: 22436293eaaf45b4cab2304be5795128, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 51.509598
+      objectReference: {fileID: 0}
+    - target: {fileID: 8378261986721948747, guid: 22436293eaaf45b4cab2304be5795128, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 30.990402
+      objectReference: {fileID: 0}
+    - target: {fileID: 9150603487842686113, guid: 22436293eaaf45b4cab2304be5795128, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 30.99
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22436293eaaf45b4cab2304be5795128, type: 3}
@@ -3849,6 +3870,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Luces
       objectReference: {fileID: 0}
+    - target: {fileID: 6178038542426248813, guid: de59b3571f2e01a40abc2b9d1f606126, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de59b3571f2e01a40abc2b9d1f606126, type: 3}
 --- !u!1001 &8093043534092031343
@@ -3938,6 +3963,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 8986603766040406703, guid: 3807b3cc79807be42b656508b99c74a9, type: 3}
+      propertyPath: humano
+      value: 
+      objectReference: {fileID: 1893969481}
     - target: {fileID: 8986603766040406703, guid: 3807b3cc79807be42b656508b99c74a9, type: 3}
       propertyPath: mordida
       value: 

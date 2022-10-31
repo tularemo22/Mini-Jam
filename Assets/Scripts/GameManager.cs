@@ -112,7 +112,7 @@ public class GameManager : MonoBehaviour
         apretarBoton.SetActive(true);
 
         //Crear un numero aleatorio que indique cuantas veces tenemos que apretar
-        int clicsNecesarios = Random.Range(5, 10);
+        int clicsNecesarios = Random.Range(5, 16);
 
         yield return new WaitForSeconds(2.5f);
 
