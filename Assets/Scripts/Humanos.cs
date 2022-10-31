@@ -24,13 +24,17 @@ public class Humanos : MonoBehaviour
 
     private void FixedUpdate() 
     {
-        enSuelo = Physics2D.OverlapCircle(pies.position, radioPies, ground);
-
-        RB.velocity = new Vector2(velocidad, RB.velocity.y);
-
-        if (enSuelo == false)
+        if (GameManager.Instance.estaMordiendo == false)
         {
-            Girar();
+             enSuelo = Physics2D.OverlapCircle(pies.position, radioPies, ground);
+
+             RB.velocity = new Vector2(velocidad, RB.velocity.y);
+
+             if (enSuelo == false)
+              {
+                 Girar();
+              }
+
         }
     }
 
@@ -41,18 +45,10 @@ public class Humanos : MonoBehaviour
         velocidad *= -1;
     }
 
-   
 
-
-
-
-
-
-
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.CompareTag("Jugador"))
+        if (collision.gameObject.CompareTag("Jugador"))
         {
             GameManager.Instance.StartCoroutine("PantallaDeMordida");
             Debug.Log("Me muerde");
