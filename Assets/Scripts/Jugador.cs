@@ -29,6 +29,7 @@ public class Jugador : MonoBehaviour
 
         if (GameManager.Instance.mordiendoAnimacion == true)
         {
+            velocidadMov = 0;
             jugadorAnim.SetBool("Mordiendo", true);
         }
         else
@@ -78,7 +79,7 @@ public class Jugador : MonoBehaviour
 
     private void Saltar()
     {
-        //Ground check. Crea una esfera en los pies del jugador para verificar mediante un buleano si está en suelo
+        //Ground check. Crea una esfera en los pies del jugador para verificar mediante un buleano si estï¿½ en suelo
         enSuelo = Physics2D.OverlapCircle(pies.position, radioPies, ground);
 
         if (Input.GetKeyDown(KeyCode.Space) && GameManager.Instance.sePuedeMover == true)

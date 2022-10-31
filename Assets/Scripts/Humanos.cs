@@ -62,7 +62,8 @@ public class Humanos : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Jugador"))
-        {
+          {
+            velocidad = 0;
             GameManager.Instance.StartCoroutine("PantallaDeMordida");
             Debug.Log("Me muerde");
 
