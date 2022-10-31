@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: daec5f5135ccadf44b34375de2410853
+guid: 9df47890e1589f5499b398c9551ad52f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,211 +117,211 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bite__0
+      name: NO_Mordida_ESCENA_nueva_1__0
       rect:
         serializedVersion: 2
         x: 0
         y: 8
-        width: 101
+        width: 102
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.86289924, y: 0.04713744}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e5aad3ffd0236e4c8dc56b11f03edec
-      internalID: 406221513
+      spriteID: 52dfa20d73e46814a80a58727e5c2fed
+      internalID: 552427555
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bite__2
+      name: NO_Mordida_ESCENA_nueva_1__2
       rect:
         serializedVersion: 2
         x: 102
         y: 8
         width: 73
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.82219, y: 0.094224274}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9254ecc42dc58c4ea974f085147f4ad
-      internalID: -760320495
+      spriteID: cd162f92ff3225b4e9060cac89acd178
+      internalID: 380207245
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bite__4
+      name: NO_Mordida_ESCENA_nueva_1__4
       rect:
         serializedVersion: 2
         x: 175
         y: 9
         width: 64
         height: 63
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.7971592, y: 0.047930915}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb7ec4ddadd9e49408737eb64596047a
-      internalID: 959580933
+      spriteID: 2d96771b512ed9647b244ca642094985
+      internalID: -2032535920
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bite__6
+      name: NO_Mordida_ESCENA_nueva_1__6
       rect:
         serializedVersion: 2
         x: 239
         y: 9
         width: 61
         height: 63
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.7871924, y: 0.047627054}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bcffc811a5ea06146812c77b9f647b83
-      internalID: -1659237422
+      spriteID: d580574dd48fd6947b97201cc568a810
+      internalID: 2053719275
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bite__8
+      name: NO_Mordida_ESCENA_nueva_1__8
       rect:
         serializedVersion: 2
         x: 300
         y: 10
-        width: 91
+        width: 92
         height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.84824705, y: 0.064598545}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34b10e0280fe22d43824a836f350c39d
-      internalID: 1909372831
+      spriteID: 488a17acdfd28ca4086dc175cc930d9f
+      internalID: 1488249213
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bite__10
+      name: NO_Mordida_ESCENA_nueva_1__10
       rect:
         serializedVersion: 2
         x: 392
         y: 10
         width: 81
         height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.827509, y: 0.048599105}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f0e654b354e15247902891c93a2302c
-      internalID: -1943642900
+      spriteID: 9aaf2e111da945a4780b22a8d7a0867a
+      internalID: 403946794
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bite__12
+      name: NO_Mordida_ESCENA_nueva_1__12
       rect:
         serializedVersion: 2
         x: 473
         y: 8
         width: 74
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.8111383, y: 0.09401111}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34c1df1a936a8e24d9fd70b71addced8
-      internalID: 2008591422
+      spriteID: ecde11076bd1e06419ea6b28037fee72
+      internalID: -1097615699
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bite__14
+      name: NO_Mordida_ESCENA_nueva_1__14
       rect:
         serializedVersion: 2
         x: 547
         y: 8
         width: 73
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.82212096, y: 0.09415272}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f663723c63cba1545969f919cf526c18
-      internalID: -863081528
+      spriteID: f41166c325952f340accba5b602dff7a
+      internalID: 1850781983
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bite__16
+      name: NO_Mordida_ESCENA_nueva_1__16
       rect:
         serializedVersion: 2
         x: 620
         y: 8
         width: 68
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.8094536, y: 0.0783789}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 388f59771c3866949b0f8a61dff9c2ee
-      internalID: -1900783530
+      spriteID: 083d3c7da7e041c46a3fb125d77ef144
+      internalID: -1928408199
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bite__18
+      name: NO_Mordida_ESCENA_nueva_1__18
       rect:
         serializedVersion: 2
         x: 688
         y: 7
         width: 84
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.833499, y: 0.12553278}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 08eecab45c753cf49bac8429854956cc
-      internalID: -146204416
+      spriteID: b41080f360ed0bb4a8d332c0be116396
+      internalID: 319413464
       vertices: []
       indices: 
       edges: []
@@ -337,26 +337,26 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Bite__15: 1834525076
-      Bite__0: 406221513
-      Bite__5: 343610617
-      Bite__12: 2008591422
-      Bite__4: 959580933
-      Bite__9: 979701148
-      Bite__18: -146204416
-      Bite__10: -1943642900
-      Bite__1: 1205120987
-      Bite__2: -760320495
-      Bite__13: 1130643301
-      Bite__16: -1900783530
-      Bite__17: 1740617259
-      Bite__6: -1659237422
-      Bite__3: 1655087010
-      Bite__11: -1812166626
-      Bite__19: -940274760
-      Bite__8: 1909372831
-      Bite__7: 40978713
-      Bite__14: -863081528
+      NO_Mordida_ESCENA_nueva_1__19: 1420633850
+      NO_Mordida_ESCENA_nueva_1__16: -1928408199
+      NO_Mordida_ESCENA_nueva_1__8: 1488249213
+      NO_Mordida_ESCENA_nueva_1__9: 48711371
+      NO_Mordida_ESCENA_nueva_1__15: -343514164
+      NO_Mordida_ESCENA_nueva_1__6: 2053719275
+      NO_Mordida_ESCENA_nueva_1__13: 1425184817
+      NO_Mordida_ESCENA_nueva_1__11: 515833324
+      NO_Mordida_ESCENA_nueva_1__14: 1850781983
+      NO_Mordida_ESCENA_nueva_1__18: 319413464
+      NO_Mordida_ESCENA_nueva_1__0: 552427555
+      NO_Mordida_ESCENA_nueva_1__2: 380207245
+      NO_Mordida_ESCENA_nueva_1__3: -1728773134
+      NO_Mordida_ESCENA_nueva_1__10: 403946794
+      NO_Mordida_ESCENA_nueva_1__7: 534227777
+      NO_Mordida_ESCENA_nueva_1__4: -2032535920
+      NO_Mordida_ESCENA_nueva_1__17: 1122316953
+      NO_Mordida_ESCENA_nueva_1__5: -227011180
+      NO_Mordida_ESCENA_nueva_1__1: 2091571062
+      NO_Mordida_ESCENA_nueva_1__12: -1097615699
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

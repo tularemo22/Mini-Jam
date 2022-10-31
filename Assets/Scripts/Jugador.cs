@@ -26,7 +26,12 @@ public class Jugador : MonoBehaviour
     {
         Saltar();
         Mover();
+        Animaciones();
 
+    }
+
+    private void Animaciones()
+    {
         if (GameManager.Instance.mordiendoAnimacion == true)
         {
             velocidadMov = 0;
@@ -34,14 +39,22 @@ public class Jugador : MonoBehaviour
         }
         else
         {
-            velocidadMov = 10 ;
+            velocidadMov = 10;
             jugadorAnim.SetBool("Mordiendo", false);
         }
         if (GameManager.Instance.muertoAnimacion == true)
         {
             jugadorAnim.SetBool("Muerto", true);
         }
-
+       /* if (GameManager.Instance.caminosLomuerde == true)
+        {
+            jugadorAnim.SetBool("CaminoLomuerde", true);
+        }
+        if (GameManager.Instance.caminosLoSuelta == true)
+        {
+            jugadorAnim.SetBool("CaminoLosuelta", true);
+        }
+       */
     }
 
     private void Mover()

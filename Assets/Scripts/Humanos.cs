@@ -76,7 +76,7 @@ public class Humanos : MonoBehaviour
     {
         if (GameManager.Instance.personaDesaparece == true)
         {
-            gameObject.SetActive(false);
+            Destroy(gameObject);
         }
     }
 

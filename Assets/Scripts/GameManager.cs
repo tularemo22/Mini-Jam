@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] GameObject apretarBoton;
 
+    [SerializeField] Animator playerAnimator;
+
     public int VecesApretadasElBoton = 0;
     public float tiempoParaEscapar;
     public bool estaMordiendo; //Seteada para que no pueda moverse mientras muerde
@@ -37,6 +39,11 @@ public class GameManager : MonoBehaviour
     public bool mordiendoAnimacion = false;
     public bool muertoAnimacion = false; //
 
+    //Paramecanica
+    public bool caminosInicio = false;
+    public bool caminosLomuerde = false;
+    public bool caminosLoSuelta = false;
+
     private void Start()
     {
         sePuedeMover = true;
@@ -46,22 +53,32 @@ public class GameManager : MonoBehaviour
         estaMordiendo = true;
         // zoom
         mordiendoAnimacion = true;
+        
+
         for (float i = 10; i > 5; i -= 1)
         {
             camaraVirtual.m_Lens.OrthographicSize = i;
             yield return new WaitForSeconds(0.5f);
         }
 
-        //Mordida
-        //Setear animacion
+        //Aca se setea mordida caminos
+
+
+
         //Llamar funcion
         StartCoroutine(EvitaMorder());
+        personaDesaparece = true; //////
+
+        //Desactivar vampiro y persona
+        //Iniciar anim de mordiendo
+
         //Tiempo para escapar antes de mirar la condicion
         yield return new WaitForSeconds(tiempoParaEscapar);
         //Condicional si escapo o no
         if (pudoEscapar)
         {
-            Soltarse();
+           StartCoroutine(Soltarse());
+            mordiendoAnimacion = false;
             VecesApretadasElBoton = 0;
         }
         else
@@ -73,6 +90,8 @@ public class GameManager : MonoBehaviour
         apretarBoton.SetActive(false);
 
         estaMordiendo = false;
+        caminosLomuerde = false;
+        caminosLoSuelta = false;
         camaraVirtual.m_Lens.OrthographicSize = 10;
     }
 
@@ -84,22 +103,28 @@ public class GameManager : MonoBehaviour
         //Crear un numero aleatorio que indique cuantas veces tenemos que apretar
         int clicsNecesarios = Random.Range(5, 10);
 
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(2.5f);
 
         if (VecesApretadasElBoton > clicsNecesarios)
         { 
             pudoEscapar = true;
+            
+
         }
         else
         {       
             pudoEscapar = false;
+           // caminosLomuerde = true;
         }
-
-        //Setear ese numero a el slider de la sed de sangre
     }
 
-    private void Soltarse()
+
+
+    IEnumerator Soltarse()
     {
+        playerAnimator.SetBool("CaminoLosuelta", true);
+
+        yield return new WaitForSeconds(4.5f);
         // Volver camara
         camaraVirtual.m_Lens.OrthographicSize = 10;
         personaDesaparece = true;
@@ -114,6 +139,8 @@ public class GameManager : MonoBehaviour
      IEnumerator Morderlo()
     {
         //Setear animacion de morderlo
+        caminosLomuerde = true;
+        yield return new WaitForSeconds(1.44f); //Tiempo que dura la animacion
         //Setear anim de muerte
         //Reiniciar la esccena
         personaDesaparece = true;
