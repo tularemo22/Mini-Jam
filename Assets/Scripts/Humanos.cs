@@ -6,9 +6,13 @@ public class Humanos : MonoBehaviour
 {
 
     [SerializeField] private float velocidad;
-    [SerializeField] private Transform controladorSuelo;
     [SerializeField] private float distancia;
     [SerializeField] private bool moviendoDerecha;
+
+    [SerializeField] private Transform pies;
+    [SerializeField] private float radioPies;
+    [SerializeField] private LayerMask ground;
+    bool enSuelo;
 
     private Rigidbody2D RB;
 
@@ -20,13 +24,17 @@ public class Humanos : MonoBehaviour
 
     private void FixedUpdate() 
     {
-      RaycastHit2D informacionSuelo = Physics2D.Raycast(controladorSuelo.position, Vector2.down, distancia);
-      
-      RB.velocity = new Vector2(velocidad, RB.velocity.y);
-
-        if (informacionSuelo == false)
+        if (GameManager.Instance.estaMordiendo == false)
         {
-            Girar();
+             enSuelo = Physics2D.OverlapCircle(pies.position, radioPies, ground);
+
+             RB.velocity = new Vector2(velocidad, RB.velocity.y);
+
+             if (enSuelo == false)
+              {
+                 Girar();
+              }
+
         }
     }
 
@@ -37,22 +45,10 @@ public class Humanos : MonoBehaviour
         velocidad *= -1;
     }
 
-    private void OnDrawGizmos() 
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        Gizmos.color = Color.red;
-        Gizmos.DrawLine(controladorSuelo.transform.position, controladorSuelo.position + Vector3.down * distancia);
-    }
-
-
-
-
-
-
-
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Jugador"))
+        if (collision.gameObject.CompareTag("Jugador"))
         {
             GameManager.Instance.StartCoroutine("PantallaDeMordida");
             Debug.Log("Me muerde");
