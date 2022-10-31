@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
     bool pudoEscapar;
     //llave
     public int llave = 0;
-    bool personaDesaparece = false; //
+    public bool personaDesaparece = false; //
 
     private void Start()
     {

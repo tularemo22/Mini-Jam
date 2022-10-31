@@ -24,7 +24,7 @@ public class Humanos : MonoBehaviour
 
     private void Update()
     {
-        
+        Desaparecer();
     }
 
     private void FixedUpdate() 
@@ -65,9 +65,9 @@ public class Humanos : MonoBehaviour
 
     private void Desaparecer()
     {
-        if ()
+        if (GameManager.Instance.personaDesaparece == true)
         {
-
+            Destroy(gameObject);
         }
     }
 
