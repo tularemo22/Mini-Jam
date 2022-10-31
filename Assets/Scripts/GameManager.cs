@@ -34,6 +34,8 @@ public class GameManager : MonoBehaviour
     //llave
     public int llave = 0;
     public bool personaDesaparece = false; //
+    public bool mordiendoAnimacion = false;
+    public bool muertoAnimacion = false; //
 
     private void Start()
     {
@@ -43,6 +45,7 @@ public class GameManager : MonoBehaviour
     {
         estaMordiendo = true;
         // zoom
+        mordiendoAnimacion = true;
         for (float i = 10; i > 5; i -= 1)
         {
             camaraVirtual.m_Lens.OrthographicSize = i;
@@ -50,9 +53,9 @@ public class GameManager : MonoBehaviour
         }
 
         //Mordida
-            //Setear animacion
-            //Llamar funcion
-               StartCoroutine(EvitaMorder());
+        //Setear animacion
+        //Llamar funcion
+        StartCoroutine(EvitaMorder());
         //Tiempo para escapar antes de mirar la condicion
         yield return new WaitForSeconds(tiempoParaEscapar);
         //Condicional si escapo o no
@@ -63,7 +66,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Morderlo();
+           StartCoroutine(Morderlo());
             VecesApretadasElBoton = 0;
         }
 
@@ -101,22 +104,34 @@ public class GameManager : MonoBehaviour
         camaraVirtual.m_Lens.OrthographicSize = 10;
         personaDesaparece = true;
 
+        sePuedeMover = true;
+        mordiendoAnimacion = false;
+        muertoAnimacion = false;
+
         //Reiniciar las veces apretadas a 0
 
         Debug.Log("Tras un duro esfuerzo conseguimos soltarnos");
     }
-    private void Morderlo()
+     IEnumerator Morderlo()
     {
         //Setear animacion de morderlo
         //Setear anim de muerte
         //Reiniciar la esccena
         personaDesaparece = true;
+        morirPersonaje();
 
         Debug.Log("MORDIENDO �AM �AM");
-
+        yield return new WaitForSeconds(2);
         RecargarEscena();
+        muertoAnimacion = false;
     }
 
+    void morirPersonaje()
+    {
+        sePuedeMover = false;
+        muertoAnimacion = true;
+
+    }
     //Llamarlo cada vez que se aprete clic
     public void ApretaElBoton()
     {

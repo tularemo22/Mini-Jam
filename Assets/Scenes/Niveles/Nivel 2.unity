@@ -1670,13 +1670,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 714733742, guid: 5f872606cd2700648b06cfb0cff57ff2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 714733744, guid: 5f872606cd2700648b06cfb0cff57ff2, type: 3}
       propertyPath: m_text
-      value: Resist
+      value: Fight the urge to bite
       objectReference: {fileID: 0}
     - target: {fileID: 957039054, guid: 5f872606cd2700648b06cfb0cff57ff2, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 957039055, guid: 5f872606cd2700648b06cfb0cff57ff2, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 53.4519
+      objectReference: {fileID: 0}
+    - target: {fileID: 957039055, guid: 5f872606cd2700648b06cfb0cff57ff2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -157.87407
       objectReference: {fileID: 0}
     - target: {fileID: 957039056, guid: 5f872606cd2700648b06cfb0cff57ff2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
