@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Creditos.unity
     guid: 40b219a993ae7474c9599708ffa41a1d
   - enabled: 1
+    path: Assets/Scenes/Pantalla tutorial.unity
+    guid: fbb75725ffa8ffb4e8cd3d5b3fdf80a2
+  - enabled: 1
     path: Assets/Scenes/Niveles/Nivel 1.unity
     guid: e4a584c6c664f66458ebc4179b8968ee
   - enabled: 1
