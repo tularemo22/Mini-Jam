@@ -1030,12 +1030,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Eugene est\xE1 atrapado y necesita tu ayuda. Tiene una enfermedad muy
-    extra\xF1a entre vampiros: es al\xE9rgico a la sangre. Por esto, fue desterrado
-    de las tierras de su padre, el Conde Dr\xE1cula, y atrapado por la familia Van
-    Helsing, con el objetivo de atraer a su padre y finalmente matarlo. \n\n\xA1Luego
-    de un par de d\xEDas en cautiverio, su sed de sangre comienza a aparecer. Ay\xFAdalo
-    a escapar antes de que su instinto le haga morder a alguien y morir en el instante!\""
+  m_text: "Eugene is trapped and needs your help. He has a very rare disease among
+    vampires: blood allergy. That's the reason his father, Count Dracula, exiliated
+    him from the castle and their lands. As a lonely wanderer, Eugene was captured
+    by the family's archienemy: Van Helsing, who hopes to use him as bait and kill
+    his father, the Count. \n\nAfter a few days trapped, his blood thirst has arisen.
+    Help him escape before his instinct makes him bite someone and die instantly!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d412c477d80b44e4ab633fb14917e772, type: 2}
   m_sharedMaterial: {fileID: -5620066714437313982, guid: d412c477d80b44e4ab633fb14917e772, type: 2}
