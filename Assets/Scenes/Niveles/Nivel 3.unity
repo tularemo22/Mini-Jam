@@ -4238,11 +4238,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2394450226392403666, guid: 5747a302b8f4f6143b40af052f920e73, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.315536
+      value: -11.462558
       objectReference: {fileID: 0}
     - target: {fileID: 2394450226392403666, guid: 5747a302b8f4f6143b40af052f920e73, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.248949
+      value: -2.2485092
       objectReference: {fileID: 0}
     - target: {fileID: 8541731872431890915, guid: 5747a302b8f4f6143b40af052f920e73, type: 3}
       propertyPath: m_audioClip
@@ -4401,6 +4401,10 @@ PrefabInstance:
     - target: {fileID: 3615324224928562170, guid: 096dbc5e9a2b23e4f915ac1bbe8b052b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615324224928562172, guid: 096dbc5e9a2b23e4f915ac1bbe8b052b, type: 3}
+      propertyPath: m_Mass
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3615324224928562173, guid: 096dbc5e9a2b23e4f915ac1bbe8b052b, type: 3}
       propertyPath: m_Name
