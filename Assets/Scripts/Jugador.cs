@@ -34,6 +34,7 @@ public class Jugador : MonoBehaviour
         }
         else
         {
+            velocidadMov = 10 ;
             jugadorAnim.SetBool("Mordiendo", false);
         }
         if (GameManager.Instance.muertoAnimacion == true)
