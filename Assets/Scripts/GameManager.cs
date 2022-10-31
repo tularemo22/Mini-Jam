@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
     bool pudoEscapar;
     //llave
     public int llave = 0;
+    bool personaDesaparece = false; //
 
     private void Start()
     {
@@ -98,6 +99,8 @@ public class GameManager : MonoBehaviour
     {
         // Volver camara
         camaraVirtual.m_Lens.OrthographicSize = 10;
+        personaDesaparece = true;
+
         //Reiniciar las veces apretadas a 0
 
         Debug.Log("Tras un duro esfuerzo conseguimos soltarnos");

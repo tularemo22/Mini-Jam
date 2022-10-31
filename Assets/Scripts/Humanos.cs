@@ -22,6 +22,11 @@ public class Humanos : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+        
+    }
+
     private void FixedUpdate() 
     {
         if (GameManager.Instance.estaMordiendo == false)
@@ -58,5 +63,12 @@ public class Humanos : MonoBehaviour
         }
     }
 
+    private void Desaparecer()
+    {
+        if ()
+        {
+
+        }
+    }
 
 }
