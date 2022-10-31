@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4083139442569328623}
   - component: {fileID: 4083139442569328620}
   - component: {fileID: 4083139442569328621}
+  - component: {fileID: 664523301}
   m_Layer: 0
   m_Name: Puerta
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 4083139442569328618}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.0398, y: -1.3085, z: 0}
-  m_LocalScale: {x: 2.6996, y: 4.7571, z: 1}
+  m_LocalScale: {x: 2.9852178, y: 1.9397929, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 1200064043, guid: 9e870c9f6e87070488fb53813b5c8222, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -102,8 +103,8 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    pivot: {x: 1, y: 0.5}
+    oldSize: {x: 0.9, y: 2.4}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -124,3 +125,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 442857b7874070544af28e328033e5cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &664523301
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4083139442569328618}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 03620e39bf9e74748bd5d89c15790ef2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
