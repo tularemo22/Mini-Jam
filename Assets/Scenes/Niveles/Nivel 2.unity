@@ -2000,8 +2000,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 849146031}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.75, y: 0.66, z: 0.049106985}
-  m_LocalScale: {x: 0.18551408, y: 0.51110953, z: 0.92929}
+  m_LocalPosition: {x: 6.6318, y: 0.66, z: 0.049106985}
+  m_LocalScale: {x: 0.50878453, y: 0.51110953, z: 0.92929}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 665935672}
@@ -3081,8 +3081,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1190152345}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.94, y: 19.93, z: 0.049106985}
-  m_LocalScale: {x: 0.04637852, y: 0.51110953, z: 0.92929}
+  m_LocalPosition: {x: 4.5155, y: 19.93, z: 0.049106985}
+  m_LocalScale: {x: 0.53871894, y: 0.51110953, z: 0.92929}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 665935672}
@@ -3268,6 +3268,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 964d312e83957914098b50f34d0cbe36, type: 3}
+--- !u!95 &1209310608 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3427718389392773589, guid: 964d312e83957914098b50f34d0cbe36, type: 3}
+  m_PrefabInstance: {fileID: 1209310607}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1216937325
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5846,11 +5851,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2394450226392403666, guid: 5747a302b8f4f6143b40af052f920e73, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.710765
+      value: -14.414874
       objectReference: {fileID: 0}
     - target: {fileID: 2394450226392403666, guid: 5747a302b8f4f6143b40af052f920e73, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 16.661268
+      value: 16.57627
       objectReference: {fileID: 0}
     - target: {fileID: 8541731872431890915, guid: 5747a302b8f4f6143b40af052f920e73, type: 3}
       propertyPath: m_Volume
@@ -6213,8 +6218,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 25970349}
     - target: {fileID: 8986603766040406703, guid: 3807b3cc79807be42b656508b99c74a9, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1209310608}
+    - target: {fileID: 8986603766040406703, guid: 3807b3cc79807be42b656508b99c74a9, type: 3}
       propertyPath: tiempoParaEscapar
-      value: 5
+      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3807b3cc79807be42b656508b99c74a9, type: 3}
