@@ -106,7 +106,6 @@ public class GameManager : MonoBehaviour
 
         sePuedeMover = true;
         mordiendoAnimacion = false;
-        muertoAnimacion = false;
 
         //Reiniciar las veces apretadas a 0
 

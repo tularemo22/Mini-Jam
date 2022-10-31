@@ -13,12 +13,14 @@ public class Humanos : MonoBehaviour
     [SerializeField] private float radioPies;
     [SerializeField] private LayerMask ground;
     bool enSuelo;
+    Animator personajeExtraAnim;
 
     private Rigidbody2D RB;
 
      private void Start() 
     {
         RB = GetComponent<Rigidbody2D>();
+        personajeExtraAnim = GetComponent<Animator>();
 
     }
 
@@ -41,6 +43,12 @@ public class Humanos : MonoBehaviour
               }
 
         }
+        else
+        {
+            personajeExtraAnim.SetTrigger("Idle");
+        }
+
+        
     }
 
     private void Girar()
