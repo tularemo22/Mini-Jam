@@ -6170,11 +6170,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2394450226392403666, guid: 5747a302b8f4f6143b40af052f920e73, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.412538
+      value: -14.433303
       objectReference: {fileID: 0}
     - target: {fileID: 2394450226392403666, guid: 5747a302b8f4f6143b40af052f920e73, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 16.57631
+      value: 16.575989
       objectReference: {fileID: 0}
     - target: {fileID: 8541731872431890915, guid: 5747a302b8f4f6143b40af052f920e73, type: 3}
       propertyPath: m_Volume
@@ -6184,7 +6184,8 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 9b3fe70035503004db9829f0bf1c3ebf, type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8541731872431890915, guid: 5747a302b8f4f6143b40af052f920e73, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5747a302b8f4f6143b40af052f920e73, type: 3}
 --- !u!1 &2078345312 stripped
 GameObject:

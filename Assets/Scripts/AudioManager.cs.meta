@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1eee4910b7dfaff47bd5c9f3bbb7b73b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - audioSource: {instanceID: 0}
+  - AudioInicioJuego: {instanceID: 0}
+  - Nivel1: {fileID: 8300000, guid: b4432fa2daa97e94aab44b8845c8b413, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

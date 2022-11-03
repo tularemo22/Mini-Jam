@@ -5,11 +5,9 @@ using UnityEngine.Audio;
 
 public class Llave : MonoBehaviour
 {
-    AudioSource audioSource;
-    public AudioClip agarrarLlave;
     private void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+       
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -20,10 +18,11 @@ public class Llave : MonoBehaviour
     {
         if (other.CompareTag("Jugador"))
         {
-            audioSource.PlayOneShot(agarrarLlave, 0.3f);
-            yield return new WaitForSeconds(0.3f);
-            Death();
+            AudioManager.instance.AgarrarLlave();
             GameManager.Instance.llave = 1;
+            yield return new WaitForSeconds(0.3f);
+            
+            Death();
         }
     }
 

@@ -21,12 +21,9 @@ public class GameManager : MonoBehaviour
         }
         
     }
-    //Sonidos
-    [Header("Sonidos")]
+
     AudioSource audioSource;
-    public AudioClip mordida;
-    public AudioClip aldeanoMuriendo;
-    public AudioClip aparicionMordiendo;
+    
 
     [Header("Setear Esto")]
     [SerializeField] CinemachineVirtualCamera camaraVirtual;
@@ -42,6 +39,7 @@ public class GameManager : MonoBehaviour
     public bool estaMordiendo; //Seteada para que no pueda moverse mientras muerde
     public bool sePuedeMover;
     bool pudoEscapar;
+    
     //llave
     public int llave = 0;
     public bool personaDesaparece = false; //
@@ -57,7 +55,14 @@ public class GameManager : MonoBehaviour
     {
         sePuedeMover = true;
         audioSource = GetComponent<AudioSource>();
+        
     }
+
+    private void Update()
+    {
+        
+    }
+    #region Mecanica Principal
     public IEnumerator PantallaDeMordida()
     {
         estaMordiendo = true;
@@ -70,7 +75,7 @@ public class GameManager : MonoBehaviour
             camaraVirtual.m_Lens.OrthographicSize = i;
             yield return new WaitForSeconds(0.5f);
         }
-        audioSource.PlayOneShot(aparicionMordiendo, 0.05f);
+        audioSource.PlayOneShot(AudioManager.instance.aparicionDracula, 0.05f);
         //Aca se setea mordida caminos
 
 
@@ -105,8 +110,7 @@ public class GameManager : MonoBehaviour
         caminosLoSuelta = false;
         //camaraVirtual.m_Lens.OrthographicSize = 10;
     }
-
-    IEnumerator EvitaMorder()
+     IEnumerator EvitaMorder()
     {
         //Apretar un boton repetidas veces para soltarte.
         apretarBoton.SetActive(true);
@@ -127,10 +131,7 @@ public class GameManager : MonoBehaviour
             pudoEscapar = false;
         }
     }
-
-
-
-    IEnumerator Soltarse()
+     IEnumerator Soltarse()
     {
         playerAnimator.SetBool("CaminoLosuelta", true);
 
@@ -165,8 +166,8 @@ public class GameManager : MonoBehaviour
 
     public void SonidoMordida()
     {
-        audioSource.PlayOneShot(mordida, 0.2f);
-        audioSource.PlayOneShot(aldeanoMuriendo, 0.2f);
+        audioSource.PlayOneShot(AudioManager.instance.mordida, 0.2f);
+        audioSource.PlayOneShot(AudioManager.instance.aldeanoMuriendo, 0.2f);
     }
 
     void morirPersonaje()
@@ -180,9 +181,10 @@ public class GameManager : MonoBehaviour
     {
         VecesApretadasElBoton++;
     }
+    #endregion
 
     //Funciones para cambio de escenas
-
+    #region Cambiar escenas
     public void IniciarJuego()
     {
         SceneManager.LoadScene(2);
@@ -212,5 +214,21 @@ public class GameManager : MonoBehaviour
         Application.Quit();
         Debug.Log("No se puede aplicar en unity pero si aparece este cartel es porque cerramos la aplicacion con exito");
     }
+
+    #endregion 
+
+    // Sonidos
+   /* private void CambiarMusica()
+    {     
+        if (nombreEscenaActual == "PantallaInicio 1")
+        {
+            AudioManager.instance.audioSource.clip = AudioManager.instance.AudioInicioJuego;
+            AudioManager.instance.audioSource.Play();
+        }
+        else
+        {
+            AudioManager.instance.audioSource.Pause();
+        }
+    } */
 
 }
