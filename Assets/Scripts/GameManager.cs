@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Cinemachine;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -19,11 +20,11 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
         }
-        
+
     }
 
     AudioSource audioSource;
-    
+
 
     [Header("Setear Esto")]
     [SerializeField] CinemachineVirtualCamera camaraVirtual;
@@ -34,7 +35,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject humano;
 
     [Header("Variables")]
-    public int VecesApretadasElBoton = 0;
+    public float vecesApretadasElBoton = 0;
     public float tiempoParaEscapar;
     public bool estaMordiendo; //Seteada para que no pueda moverse mientras muerde
     public bool sePuedeMover;
@@ -50,17 +51,26 @@ public class GameManager : MonoBehaviour
     public bool caminosInicio = false;
     public bool caminosLomuerde = false;
     public bool caminosLoSuelta = false;
+    private float clicsNecesarios;
+
+    [Header("Barra de sed")]
+
+    [SerializeField] Image barraDeSed;
 
     private void Start()
     {
         sePuedeMover = true;
         audioSource = GetComponent<AudioSource>();
-        
+
     }
 
     private void Update()
     {
         
+    }
+    private void FixedUpdate()
+    {
+        //BarraSed();
     }
     #region Mecanica Principal
     public IEnumerator PantallaDeMordida()
@@ -96,12 +106,12 @@ public class GameManager : MonoBehaviour
         {
            StartCoroutine(Soltarse());
             mordiendoAnimacion = false;
-            VecesApretadasElBoton = 0;
+            vecesApretadasElBoton = 0;
         }
         else
         {
            StartCoroutine(Morderlo());
-            VecesApretadasElBoton = 0;
+            vecesApretadasElBoton = 0;
         }
 
         apretarBoton.SetActive(false);
@@ -118,11 +128,11 @@ public class GameManager : MonoBehaviour
         apretarBoton.SetActive(true);
 
         //Crear un numero aleatorio que indique cuantas veces tenemos que apretar
-        int clicsNecesarios = Random.Range(5, 16);
+        clicsNecesarios = Random.Range(5, 16);
 
         yield return new WaitForSeconds(2.5f);
 
-        if (VecesApretadasElBoton > clicsNecesarios)
+        if (vecesApretadasElBoton > clicsNecesarios)
         { 
             pudoEscapar = true;
         }
@@ -175,7 +185,8 @@ public class GameManager : MonoBehaviour
     //Llamarlo cada vez que se aprete clic
     public void ApretaElBoton()
     {
-        VecesApretadasElBoton++;
+        vecesApretadasElBoton++;
+        barraDeSed.fillAmount = vecesApretadasElBoton / clicsNecesarios;
     }
     #endregion
 
@@ -213,5 +224,10 @@ public class GameManager : MonoBehaviour
 
     #endregion
 
+    private void BarraSed()
+    {
+        barraDeSed.fillAmount = vecesApretadasElBoton / clicsNecesarios;
+
+    }
    
 }
