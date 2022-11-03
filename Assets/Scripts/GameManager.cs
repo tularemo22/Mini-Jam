@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
     public bool estaMordiendo; //Seteada para que no pueda moverse mientras muerde
     public bool sePuedeMover;
     bool pudoEscapar;
-    
+    public bool reposicionar = false;
     //llave
     public int llave = 0;
     public bool personaDesaparece = false; //
@@ -68,21 +68,22 @@ public class GameManager : MonoBehaviour
         estaMordiendo = true;
         // zoom
         mordiendoAnimacion = true;
-        
 
         for (float i = 10; i > 5; i -= 1)
         {
             camaraVirtual.m_Lens.OrthographicSize = i;
             yield return new WaitForSeconds(0.5f);
         }
+        reposicionar = true;
         audioSource.PlayOneShot(AudioManager.instance.aparicionDracula, 0.05f);
+        
         //Aca se setea mordida caminos
 
 
 
         //Llamar funcion
-        StartCoroutine(EvitaMorder());
         Destroy(humano.gameObject);
+        StartCoroutine(EvitaMorder());
         personaDesaparece = true; //////
 
         //Desactivar vampiro y persona
@@ -108,6 +109,7 @@ public class GameManager : MonoBehaviour
         estaMordiendo = false;
         caminosLomuerde = false;
         caminosLoSuelta = false;
+        reposicionar = false;
         //camaraVirtual.m_Lens.OrthographicSize = 10;
     }
      IEnumerator EvitaMorder()
@@ -123,8 +125,6 @@ public class GameManager : MonoBehaviour
         if (VecesApretadasElBoton > clicsNecesarios)
         { 
             pudoEscapar = true;
-            
-
         }
         else
         {       
@@ -133,19 +133,15 @@ public class GameManager : MonoBehaviour
     }
      IEnumerator Soltarse()
     {
+        sePuedeMover = false;
+        personaDesaparece = true;
         playerAnimator.SetBool("CaminoLosuelta", true);
 
-        yield return new WaitForSeconds(4.8f);
+        yield return new WaitForSeconds(5.3f);
         // Volver camara
         camaraVirtual.m_Lens.OrthographicSize = 10;
-        personaDesaparece = true;
-
         sePuedeMover = true;
-        mordiendoAnimacion = false;
-
-        //Reiniciar las veces apretadas a 0
-
-        Debug.Log("Tras un duro esfuerzo conseguimos soltarnos");
+        mordiendoAnimacion = false;      
     }
      IEnumerator Morderlo()
     {
@@ -215,20 +211,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("No se puede aplicar en unity pero si aparece este cartel es porque cerramos la aplicacion con exito");
     }
 
-    #endregion 
+    #endregion
 
-    // Sonidos
-   /* private void CambiarMusica()
-    {     
-        if (nombreEscenaActual == "PantallaInicio 1")
-        {
-            AudioManager.instance.audioSource.clip = AudioManager.instance.AudioInicioJuego;
-            AudioManager.instance.audioSource.Play();
-        }
-        else
-        {
-            AudioManager.instance.audioSource.Pause();
-        }
-    } */
-
+   
 }

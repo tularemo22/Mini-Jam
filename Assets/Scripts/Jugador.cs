@@ -14,6 +14,7 @@ public class Jugador : MonoBehaviour
     [SerializeField] private Transform pies;     // Chequeo de suelo
     [SerializeField] private LayerMask ground;  //
     [SerializeField] private float radioPies;  //
+    [SerializeField] private GameObject reposicion;
 
     void Start()
     {
@@ -27,6 +28,7 @@ public class Jugador : MonoBehaviour
         Saltar();
         Mover();
         Animaciones();
+        Reposicionar();
 
     }
 
@@ -103,6 +105,15 @@ public class Jugador : MonoBehaviour
                  jugadorRB.AddForce(Vector2.up * fuerzaSalto, ForceMode2D.Impulse);
             }
         }
+    }
+
+    public void Reposicionar()
+    {
+        if (GameManager.Instance.reposicionar)
+        {
+            Vector2 posicion = new Vector2(reposicion.transform.position.x, reposicion.transform.position.y);
+            jugadorRB.transform.position = posicion;
+        }     
     }
 
     //Sonidos
